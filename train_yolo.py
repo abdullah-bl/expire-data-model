@@ -26,14 +26,15 @@ def train_yolo(
     print("=" * 50)
 
     # Load YOLOv11 model
-    model_name = f"yolov11{model_size}.pt"
+    model_name = f"yolo11{model_size}"
     print(f"Loading {model_name}...")
 
     try:
         model = YOLO(model_name)
+        print(f"✅ Successfully loaded {model_name} model")
     except Exception as e:
         print(f"❌ Error loading {model_name}: {e}")
-        print("Install latest ultralytics: pip install ultralytics>=8.3.0")
+        print("Make sure you have the latest ultralytics installed: pip install ultralytics")
         return None
 
     # Check dataset
@@ -76,14 +77,15 @@ def train_yolo(
         print(f"❌ Training error: {e}")
         return None
 
-def quick_train():
+def quick_train(device="auto"):
     """Quick training with optimal settings"""
     print("⚡ Quick Training Mode")
     return train_yolo(
         model_size="n",
         epochs=30,
         batch_size=4,
-        img_size=320
+        img_size=320,
+        device=device
     )
 
 if __name__ == "__main__":
@@ -99,7 +101,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.quick:
-        results = quick_train()
+        results = quick_train(device=args.device)
     else:
         results = train_yolo(
             data_yaml=args.data,

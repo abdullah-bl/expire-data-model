@@ -5,3 +5,17 @@ ocr_dataset/
 yolo_dataset/
 inference_results.json
 __pycache__/
+yolo11_date_detection/
+.venv/
+*.pt
+*.pth
+*.pkl
+*.ptl
+*.ptz
+*.ptf
+*.ptg
+*.ptj
+*.ptk
+*.ptl
+
+
