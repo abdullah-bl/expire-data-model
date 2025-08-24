@@ -1,0 +1,38 @@
+# Core YOLO and Computer Vision Libraries
+ultralytics>=8.3.0          # YOLOv11 (latest version) for object detection
+opencv-python>=4.8.0        # Computer vision operations
+Pillow>=10.0.0              # Image processing
+psutil>=5.9.0               # System monitoring (for performance)
+
+# Data Processing and Analysis
+numpy>=1.24.0               # Numerical operations
+pandas>=2.0.0               # Data manipulation and analysis
+matplotlib>=3.7.0           # Plotting and visualization
+seaborn>=0.12.0             # Statistical data visualization
+
+# OCR and Text Processing
+pytesseract>=0.3.10         # OCR using Tesseract
+easyocr>=1.7.0              # Easy OCR library
+torch>=2.0.0                # PyTorch (required by EasyOCR)
+torchvision>=0.15.0         # PyTorch vision
+
+# Deep Learning and Model Training
+torch>=2.0.0                # Already listed above
+torchvision>=0.15.0         # Already listed above
+
+# Image Processing and Augmentation
+albumentations>=1.3.0       # Image augmentation
+scikit-image>=0.21.0        # Image processing
+
+# Development and Utilities
+tqdm>=4.65.0                # Progress bars
+requests>=2.31.0            # HTTP requests
+python-dotenv>=1.0.0        # Environment variables
+gdown>=5.1.0                # Google Drive downloads
+
+# Optional: For edge deployment
+onnx>=1.14.0                # ONNX export for edge deployment
+onnxruntime>=1.15.0         # ONNX runtime for inference
+
+# Optional: For model quantization
+torchao>=0.1.0              # PyTorch quantization (if available)

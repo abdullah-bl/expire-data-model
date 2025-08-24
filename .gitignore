@@ -1,0 +1,7 @@
+datasets/
+temp_dataset/
+dataset.zip
+ocr_dataset/
+yolo_dataset/
+inference_results.json
+__pycache__/
